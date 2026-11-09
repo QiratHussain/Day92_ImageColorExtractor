@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Extractor</title>
+  <style>
+    :root {
+      --bg-color: #fdfbf7;
+      --text-color: #3d2314;
+      --accent-color: #5c3a21;
+      --card-bg: #f4efe6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 2rem 10%;
+      background-color: var(--bg-color);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-color);
+    }
+
+    main {
+      flex: 1;
+      padding: 4rem 10%;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero {
+      margin-bottom: 4rem;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--accent-color);
+      max-width: 600px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 2rem;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      color: var(--accent-color);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      padding: 2rem 10%;
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--accent-color);
+      background-color: var(--bg-color);
+    }
+
+    @media (max-width: 768px) {
+      header, main, footer {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+      .hero h2 {
+        font-size: 2.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Color Extractor</h1>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Welcome to Color Extractor</h2>
+      <p>Upload any image to extract its colors and use in your own projects.</p>
+    </section>
+
+    <section class="content-grid">
+
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Color Extractor. All rights reserved.
+  </footer>
+
+</body>
+</html>

@@ -157,7 +157,15 @@
             });
           </script>
 
-
+    </section>
+    <section>
+        {% if colors_data: %}
+        <ul>
+            {% for color in colors_data %}
+            <li>{{ color }} </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
     </section>
   </main>
 

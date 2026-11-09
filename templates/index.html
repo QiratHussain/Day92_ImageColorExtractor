@@ -124,16 +124,20 @@
         <div class="upload-container">
             <h3>Upload Your Image</h3>
             <p>Choose a PNG, JPG, or GIF file from your device.</p>
-            
-            <!-- HTML File Input -->
-            <label for="image-upload" class="upload-btn">Browse Files</label>
-            <input type="file" id="image-upload" accept="image/*">
         
-            <!-- Optional live preview container -->
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+        
+                <input type="file" id="image-upload"
+                       name="image" accept="image/*" required>
+        
+                <button type="submit">Extract Colors</button>
+        
+            </form>
+        
             <div id="preview-container">
-              <img id="preview-image" src="" alt="Image Preview">
+                <img id="preview-image" src="" alt="Image Preview">
             </div>
-          </div>
+        </div>
         
           <script>
             const imageUpload = document.getElementById('image-upload');

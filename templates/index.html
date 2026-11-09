@@ -121,6 +121,39 @@
 
     <section class="content-grid">
 
+        <div class="upload-container">
+            <h3>Upload Your Image</h3>
+            <p>Choose a PNG, JPG, or GIF file from your device.</p>
+            
+            <!-- HTML File Input -->
+            <label for="image-upload" class="upload-btn">Browse Files</label>
+            <input type="file" id="image-upload" accept="image/*">
+        
+            <!-- Optional live preview container -->
+            <div id="preview-container">
+              <img id="preview-image" src="" alt="Image Preview">
+            </div>
+          </div>
+        
+          <script>
+            const imageUpload = document.getElementById('image-upload');
+            const previewContainer = document.getElementById('preview-container');
+            const previewImage = document.getElementById('preview-image');
+        
+            imageUpload.addEventListener('change', function(event) {
+              const file = event.target.files[0];
+              if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                  previewImage.src = e.target.result;
+                  previewContainer.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+              }
+            });
+          </script>
+
+
     </section>
   </main>
 
